@@ -39,7 +39,7 @@ double sinn(double x, uint16_t count) {
 double result = 0.0;
     for (uint16_t n = 0; n < count; n++) {
         int sign = (n % 2 == 0) ? 1 : -1;
-        result += sign * calcitem(x, n);
+        result += sign * calcItem(x, n);
         result += item;
     }
     return result;
