@@ -27,26 +27,20 @@ double numerator = pown(x, n);
 }
 
 double expn(double x, uint16_t count) {
-double result = 0.0;
-    for (uint16_t n = 0; n < count; n++) {
-        double item = calcItem(x, n);
-        result += item;
-    }
-    return result;
-}
+    double result = 1;
+    for (uint16_t i = 1; i <= count; i++) {
+        result += calcItem(x, i);    }
+    return res2;}
 
 double sinn(double x, uint16_t count) {
     double result = x;
-    for (uint16_t n = 0; n < count; n++) {
-        result += pown((-1.0), n - 1) * calcItem(x, (2 * n) - 1);
-    }
-    return result;
-}
+    for (uint64_t i = 2; i <= count; i++) {
+        result += pown((-1.0), i - 1) * calcItem(x, (2 * i) - 1);    }
+    return result;}
 
 double cosn(double x, uint16_t count) {
-double result = 1;
-    for (uint16_t n = 0; n < count; n++) {
-        result += pown((-1.0), n - 1) * calcItem(x, (2 * n) - 2);
-    }
-    return result;
+    double result = 1;
+    for (uint64_t i = 2; i <= count; i++) {
+        result += pown((-1.0), i - 1) * calcItem(x, (2 * i) - 2);
+    }    return result;
 }
