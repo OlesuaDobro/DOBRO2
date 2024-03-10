@@ -29,14 +29,18 @@ double numerator = pown(x, n);
 double expn(double x, uint16_t count) {
     double result = 1;
     for (uint16_t i = 1; i <= count; i++) {
-        result += calcItem(x, i);    }
-    return res2;}
+        result += calcItem(x, i);
+    }
+    return result;
+}
 
 double sinn(double x, uint16_t count) {
     double result = x;
     for (uint64_t i = 2; i <= count; i++) {
-        result += pown((-1.0), i - 1) * calcItem(x, (2 * i) - 1);    }
-    return result;}
+        result += pown((-1.0), i - 1) * calcItem(x, (2 * i) - 1);
+    }
+    return result;
+}
 
 double cosn(double x, uint16_t count) {
     double result = 1;
