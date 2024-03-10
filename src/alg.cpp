@@ -38,8 +38,7 @@ double result = 0.0;
 double sinn(double x, uint16_t count) {
     double result = x;
     for (uint16_t n = 0; n < count; n++) {
-        result += pown((-1.0), n - 1) * calcItem(x, (2 * n) - 1);    }
-        result += item;
+        result += pown((-1.0), n - 1) * calcItem(x, (2 * n) - 1);
     }
     return result;
 }
